@@ -7,6 +7,6 @@ RUN echo '<marquee>Hello Arsys!!! </marquee>' > /var/www/html/index.html
 
 EXPOSE 80
 
-ENTRYPOINT ["nginx","-g daemon off;"]
+WORKDIR /var/www/html/
 
-CMD ["-h"]
+ENTRYPOINT ["nginx","-g daemon off;"]
