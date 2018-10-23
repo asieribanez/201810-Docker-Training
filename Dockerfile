@@ -4,6 +4,7 @@ MAINTAINER aibanez@arsys.es
 RUN apt update
 RUN apt install -y nginx
 RUN echo '<marquee>Hello Arsys!!! </marquee>' > /var/www/html/index.html
-RUN apt update
 
 EXPOSE 80
+
+CMD ["nginx","-g","'daemon off;'"]
