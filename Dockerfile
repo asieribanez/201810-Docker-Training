@@ -13,5 +13,5 @@ ENV DATABASE_IP 192.167.2.9
 
 USER grogman
 
-#ENTRYPOINT ["nginx","-g daemon off;"]
+VOLume ["/my-data"]
 
