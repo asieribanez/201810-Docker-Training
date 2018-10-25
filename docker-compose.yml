@@ -1,0 +1,17 @@
+version: '3.7'
+
+services: 
+  arsys-wordpress: 
+    image: wordpress:4-php5.6-apache
+    restart: always
+    ports:
+      - "8080:80"
+    environment: 
+      WORDPRESS_DB_PASSWORD: db_pass
+      WORDPRESS_DB_HOST: arsys-mysql
+
+  arsys-mysql: 
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: db_pass
